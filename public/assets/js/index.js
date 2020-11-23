@@ -57,9 +57,10 @@ const handleNoteSave = function () {
   };
 
   saveNote(newNote).then(() => {
-    getAndRenderNotes();
+   
     renderActiveNote();
   });
+   getAndRenderNotes();
 };
 
 // Delete the clicked note
@@ -74,9 +75,10 @@ const handleNoteDelete = function (event) {
   }
 
   deleteNote(note.id).then(() => {
-    getAndRenderNotes();
+    
     renderActiveNote();
   });
+  getAndRenderNotes();
 };
 
 // Sets the activeNote and displays it
